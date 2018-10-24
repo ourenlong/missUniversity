@@ -35,12 +35,12 @@ public class AdministratorDao {
 	
 	
 	
-	public void delAdministratorDao(String administrator_Account){
+	public void delAdministratorDao(Administrator administrator){
 		conn = new Conn();
 		  try {
 
 			 
-			  String sql="delete from Administrator where Administrator_Account='"+administrator_Account+"'";
+			  String sql="delete from Administrator where Administrator_Account='"+administrator.getAdministrator_Account()+"'";
 			PreparedStatement prep = conn.connection.prepareStatement(sql);
 	  		boolean rs = prep.execute();
 	  		System.out.println(rs);
@@ -57,12 +57,12 @@ public class AdministratorDao {
 		}
 	}
 	
-	public void modifyAdministratorDao(String Account,Administrator administrator ){
+	public void modifyAdministratorDao(Administrator administrator ){
 		conn = new Conn();
 		  try {
 			
 			  String sql= "update Administrator set Administrator_Account='"+administrator.getAdministrator_Account()+"',Administrator_Password='"+
-			  administrator.getAdministrator_Password()+"',Administrator_Root='"+administrator.getAdministrator_Root()+"' where Administrator_Account='"+Account+"'";
+			  administrator.getAdministrator_Password()+"',Administrator_Root='"+administrator.getAdministrator_Root()+"' where Administrator_Account='"+administrator.getAdministrator_Account()+"'";
 			PreparedStatement prep = conn.connection.prepareStatement(sql);
 	  		boolean rs = prep.execute();
 	  		System.out.println(rs);
