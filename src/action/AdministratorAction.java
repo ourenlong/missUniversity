@@ -1,7 +1,5 @@
 package action;
-
 import java.sql.SQLException;
-
 import dao.AdministratorDao;
 import modle.Administrator;
 
