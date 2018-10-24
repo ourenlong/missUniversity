@@ -9,25 +9,25 @@ import java.sql.SQLException;
 
 
 public class Conn {
-	//final ²»¿ÉĞŞ¸Ä£¬±ØĞë³õÊ¼»¯
+	//final ä¸å¯ä¿®æ”¹ï¼Œå¿…é¡»åˆå§‹åŒ–
   public final static String drivername = "com.mysql.jdbc.Driver";
   public final static String user = "root";
   public final static String password = "root";
-  public final static String url = "jdbc:mysql://localhost:3306/gxa";
+  public final static String url = "jdbc:mysql://localhost:3306/missuniversity";
   
   public Connection connection;
   
-  //¹¹Ôì·½·¨ºÍ ÀàÃûÍ¬Ãû£¬Ã»ÓĞ·µ»ØÖµ£¬new ¶ÔÏóµÄÊ±ºòµ÷ÓÃ,³õÊ¼»¯»ù±¾ÉèÖÃºÍ³ÉÔ±±äÁ¿
-  //Í¼ĞÎ½çÃæÒª´ò¿ªÊı¾İ¿â²¢ÇÒÍê³É²éÑ¯
-  //1.ÔËĞĞexe
-  //2.ÌîĞ´Ö÷»úÃû¶Ë¿ÚºÅ ÓÃ»§Ãû ÃÜÂëºó Á¬½Ó
-  //3.±àĞ´²éÑ¯Óï¾ä£¨ĞÂ¿ª²éÑ¯±à¼­Æ÷£©
-  //4.Ö´ĞĞ²éÑ¯µÃµ½½á¹û£¨Ñ¡ÖĞ°´f8£©
-  //5.ÏÔÊ¾½á¹û
+  //æ„é€ æ–¹æ³•å’Œ ç±»ååŒåï¼Œæ²¡æœ‰è¿”å›å€¼ï¼Œnew å¯¹è±¡çš„æ—¶å€™è°ƒç”¨,åˆå§‹åŒ–åŸºæœ¬è®¾ç½®å’Œæˆå‘˜å˜é‡
+  //å›¾å½¢ç•Œé¢è¦æ‰“å¼€æ•°æ®åº“å¹¶ä¸”å®ŒæˆæŸ¥è¯¢
+  //1.è¿è¡Œexe
+  //2.å¡«å†™ä¸»æœºåç«¯å£å· ç”¨æˆ·å å¯†ç å è¿æ¥
+  //3.ç¼–å†™æŸ¥è¯¢è¯­å¥ï¼ˆæ–°å¼€æŸ¥è¯¢ç¼–è¾‘å™¨ï¼‰
+  //4.æ‰§è¡ŒæŸ¥è¯¢å¾—åˆ°ç»“æœï¼ˆé€‰ä¸­æŒ‰f8ï¼‰
+  //5.æ˜¾ç¤ºç»“æœ
   public Conn(){
 	  try {
-		Class.forName(drivername);//Class.forNameÊÇjava·´Éä»úÖÆ£¬Ò»¸öÃû×Ö¿ÉÒÔ±ä³ÉÒ»¸öÀàºÍ¶ÔÏó£¬¶ÔÓ¦µÚÒ»²½
-		connection = DriverManager.getConnection(url, user, password);//¶ÔÓ¦µÄµÚ¶ş²½
+		Class.forName(drivername);//Class.forNameæ˜¯javaåå°„æœºåˆ¶ï¼Œä¸€ä¸ªåå­—å¯ä»¥å˜æˆä¸€ä¸ªç±»å’Œå¯¹è±¡ï¼Œå¯¹åº”ç¬¬ä¸€æ­¥
+		connection = DriverManager.getConnection(url, user, password);//å¯¹åº”çš„ç¬¬äºŒæ­¥
 	} catch (ClassNotFoundException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
@@ -36,27 +36,14 @@ public class Conn {
 		e.printStackTrace();
 	}
   }
+
+
   
-  public void getStudent(){
-	  try {
-		  //¶ÔÓ¦µÚ3²¿
-		PreparedStatement prep = connection.prepareStatement("select * from student");
-		ResultSet rs = prep.executeQuery();
-		while(rs.next()){
-			String sno = rs.getString(1);
-			String name = rs.getString(2);
-			String sex = rs.getString(3);
-			float score = rs.getFloat(10);
-			
-			System.out.println("Ñ§ºÅ£º"+sno+"ĞÕÃû "+name+"ĞÔ±ğ "+sex+"·ÖÊı "+score);
-		}
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-  }
+ 
+	
   
-  public static void main(String[] args) {
-	new Conn().getStudent();
-}
+  
+//  public static void main(String[] args) {
+//	new Conn().getStudent();
+//}
 }
