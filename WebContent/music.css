@@ -1,0 +1,137 @@
+/*music.html*/
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    
+    background: url("images/music_bg3.gif") no-repeat;
+    background-size: cover; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+}
+
+#Music_Box{
+    margin: 0 calc((100vw - 1500px)/2);
+    height: 480px;
+    position: relative;
+    width: 1500px;
+    /*width: auto;*/
+    font: 16px/1.5 Tahoma,'\5FAE\8F6F\96C5\9ED1','Microsoft Yahei',"hiragino sans gb", Helvetica, Arial, "\5b8b\4f53", 'sans-serif';
+    /*overflow: hidden;*/
+}
+
+/*ul{
+    
+    list-style: none;
+    margin: 0;
+}*/
+
+#Music_Box a{
+    text-decoration: none;
+}
+
+#Music_Box a:hover{
+    text-decoration: none;
+}
+
+#Music_Box li{
+    height:480px;
+    position: absolute;
+    left:0;
+    right:0;
+}
+
+#Music_Box li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.slideElement1{
+    background: url("images/new9.gif") no-repeat;
+
+    opacity: 1;
+    z-index: 1;
+}
+
+.slideElement2{
+    background: url("images/new3.jpg") no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slideElement3{
+    background: url("images/new1.jpg") no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slideElement4{
+    background: url("images/new4.jpg") no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slideElement5{
+    background: url("images/new5.jpg") no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slideElement6{
+    background: url("images/new2.jpg") no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slideElement7{
+    background: url("images/new7.jpg") no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.slideElement8{
+    background: url("images/new8.jpg") no-repeat;
+    opacity: 0;
+    z-index: 0;
+}
+
+.autoBox{
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.titleBox{
+    position: absolute;
+    background: rgba(255,187,255,.3);
+    width: 250px;
+    height: 422px;
+    padding-top: 20px;
+    right: 0px;
+    top:29px;
+    text-align: center;
+    z-index: 2;
+}
+
+.titleBox a{
+    display: inline-block;
+    color: #fff;
+    width: 210px;
+    line-height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.content{
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+}
+
