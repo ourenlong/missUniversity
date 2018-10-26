@@ -1,0 +1,68 @@
+.logo{
+    display: inline-block;
+    /*vertical-align: bottom;*/
+    vertical-align: middle;
+
+}
+#Logo{
+    display: block;
+    width:110px;
+    height: 58px;
+    margin-left: 30px;
+}
+
+
+/*#first*/
+/*{*/
+    /*color: rgb(255,19,98);*/
+/*}*/
+
+.title{
+    font-size: 0;
+    width: 100vw;
+    height: 60px;
+    position: fixed;
+    background-color: rgb(148,0,12);
+    z-index: 2;
+}
+
+.dropdownmenu{
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+
+}
+
+.dropdownmenu ul {
+    background: grey;
+    list-style: none;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 0;
+}
+.dropdownmenu li {
+    /*float: left;*/
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    width: calc((100vw - 150px) /6);
+}
+.dropdownmenu a {
+    background: rgb(148,0,12);
+    /*background: #30A6E6;*/
+    color: #FFFFFF;
+    display: block;
+    font: bold 22px/20px SimSun;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    /*-webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;*/
+}
+.dropdownmenu a:hover{
+    background: rgb(106,0,2);
+    color: rgb(255,19,98);
+}
